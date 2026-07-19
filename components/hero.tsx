@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export function Hero() {
@@ -22,17 +21,11 @@ export function Hero() {
           </h1>
           <p className="max-w-[520px] text-[16px] leading-[1.6] text-ink-muted">{t.hero.subtitle}</p>
           <div className="flex flex-wrap items-center gap-3 pt-2">
-            <Link
-              href="#projects"
-              className="rounded-pill bg-primary px-7 py-3 text-[15px] font-medium text-primary-on transition hover:bg-primary-dark active:scale-95"
-            >
-              {t.card.viewProject}
-            </Link>
             <a
               href="https://github.com/dldmswn0293-stack"
               target="_blank"
               rel="noreferrer"
-              className="rounded-pill border border-border px-7 py-3 text-[15px] font-medium text-ink transition hover:border-ink active:scale-95"
+              className="rounded-pill bg-primary px-7 py-3 text-[15px] font-medium text-primary-on transition hover:bg-primary-dark active:scale-95"
             >
               GitHub
             </a>

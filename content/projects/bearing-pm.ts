@@ -32,7 +32,7 @@ export const bearingPm: Project = {
     },
   ],
   techStack: ["RandomForest", "scikit-learn", "pandas", "Streamlit"],
-  cover: "/projects/bearing-pm/cover.png",
+  cover: "/projects/bearing-pm/stitch-cover.jpg",
   gallery: [
     { src: "/projects/bearing-pm/fig-rms.png", caption: { ko: "RMS 기반 진동 신호 추이", en: "Vibration RMS trend over time" } },
     { src: "/projects/bearing-pm/fig-importance.png", caption: { ko: "특징 중요도", en: "Feature importance" } },

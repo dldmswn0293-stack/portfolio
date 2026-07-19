@@ -23,7 +23,7 @@ export const wafer: Project = {
     { ko: "MLflow로 실험 추적, macro F1 기준 모델 선정", en: "Experiment tracking in MLflow, model selection by macro F1" },
   ],
   techStack: ["CNN", "TensorFlow/Keras", "Grad-CAM", "MLflow", "Streamlit"],
-  cover: "/projects/wafer/cover.png",
+  cover: "/projects/wafer/stitch-cover.jpg",
   gallery: [
     { src: "/projects/wafer/grad-cam.png", caption: { ko: "Grad-CAM 시각화", en: "Grad-CAM visualization" } },
     { src: "/projects/wafer/confusion-matrix-after.png", caption: { ko: "혼동 행렬(개선 후)", en: "Confusion matrix (after tuning)" } },

@@ -23,7 +23,7 @@ export const digitalTwin: Project = {
     { ko: "Claude API와 로컬 sLLM 백엔드 전환, LangSmith로 전체 트레이싱", en: "Swappable Claude API / local sLLM backend, fully traced with LangSmith" },
   ],
   techStack: ["LangGraph", "LangChain", "Claude API", "ChromaDB", "BM25", "LangSmith", "Streamlit"],
-  cover: "/projects/digital-twin/cover.png",
+  cover: "/projects/digital-twin/stitch-cover.jpg",
   gallery: [
     { src: "/projects/digital-twin/graph.png", caption: { ko: "LangGraph 파이프라인 구조", en: "LangGraph pipeline structure" } },
     { src: "/projects/digital-twin/hybrid-search.png", caption: { ko: "하이브리드 검색 동작", en: "Hybrid search in action" } },

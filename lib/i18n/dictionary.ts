@@ -3,7 +3,7 @@ export type Locale = "ko" | "en";
 export interface Dictionary {
   nav: { work: string };
   hero: { eyebrow: string; title: string; subtitle: string; capabilitiesLabel: string };
-  card: { github: string; demo: string; demoNotice: string; viewProject: string; whyItMatters: string };
+  card: { github: string; demo: string; demoNotice: string; whyItMatters: string };
   detail: { back: string; highlights: string; techStack: string; gallery: string; resources: string };
   footer: { rights: string };
 }
@@ -22,7 +22,6 @@ export const dictionary: Record<Locale, Dictionary> = {
       github: "GitHub",
       demo: "Live Demo",
       demoNotice: "최초 로딩 시 20~30초 정도 걸릴 수 있어요.",
-      viewProject: "프로젝트 자세히 보기",
       whyItMatters: "왜 중요한가",
     },
     detail: {
@@ -49,7 +48,6 @@ export const dictionary: Record<Locale, Dictionary> = {
       github: "GitHub",
       demo: "Live Demo",
       demoNotice: "First load may take 20-30s while the demo wakes up.",
-      viewProject: "View project",
       whyItMatters: "Why it matters",
     },
     detail: {
