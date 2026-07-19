@@ -4,7 +4,7 @@ export interface Dictionary {
   nav: { work: string };
   hero: { eyebrow: string; title: string; subtitle: string; capabilitiesLabel: string };
   card: { github: string; demo: string; demoNotice: string; whyItMatters: string };
-  detail: { back: string; highlights: string; techStack: string; gallery: string; resources: string };
+  detail: { back: string; highlights: string; techStack: string; resources: string };
   footer: { rights: string };
 }
 
@@ -28,7 +28,6 @@ export const dictionary: Record<Locale, Dictionary> = {
       back: "전체 프로젝트",
       highlights: "Key Highlights",
       techStack: "Tech Stack",
-      gallery: "스크린샷",
       resources: "자료",
     },
     footer: {
@@ -54,7 +53,6 @@ export const dictionary: Record<Locale, Dictionary> = {
       back: "All projects",
       highlights: "Key Highlights",
       techStack: "Tech Stack",
-      gallery: "Screenshots",
       resources: "Resources",
     },
     footer: {

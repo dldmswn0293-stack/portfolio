@@ -1,13 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Check } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import type { Project } from "@/content/projects/types";
 import { CtaButtons } from "@/components/cta-buttons";
 import { TechBadge } from "@/components/tech-badge";
-import { Gallery } from "@/components/gallery";
+import { MediaPreview } from "@/components/media-preview";
 
 export function ProjectDetailBody({ project }: { project: Project }) {
   const { locale, t } = useLanguage();
@@ -23,15 +22,7 @@ export function ProjectDetailBody({ project }: { project: Project }) {
         </p>
         <h1 className="text-[28px] font-bold leading-[1.25] text-ink sm:text-[36px]">{project.title[locale]}</h1>
         <p className="max-w-[600px] text-[16px] leading-[1.6] text-ink-muted">{project.tagline[locale]}</p>
-        <div className="relative aspect-video w-full max-w-[860px] overflow-hidden rounded-lg product-shadow">
-          <Image
-            src={project.cover}
-            alt={project.title[locale]}
-            fill
-            sizes="(min-width: 900px) 860px, 100vw"
-            className="object-cover"
-          />
-        </div>
+        <MediaPreview images={project.gallery} video={project.video} title={project.title[locale]} />
       </section>
 
       <section className="border-y border-border bg-surface px-6 py-16">
@@ -72,34 +63,27 @@ export function ProjectDetailBody({ project }: { project: Project }) {
         </div>
       </section>
 
-      <section className="bg-canvas px-6 py-16">
-        <div className="mx-auto flex max-w-[1000px] flex-col gap-10">
-          <div>
-            <h2 className="mb-6 text-[19px] font-bold text-ink">{t.detail.gallery}</h2>
-            <Gallery images={project.gallery} />
+      {project.resources && project.resources.length > 0 && (
+        <section className="bg-canvas px-6 py-16">
+          <div className="mx-auto flex max-w-[760px] flex-col gap-1">
+            <h2 className="mb-3 text-[19px] font-bold text-ink">{t.detail.resources}</h2>
+            <ul className="flex flex-col gap-1">
+              {project.resources.map((r) => (
+                <li key={r.url}>
+                  <Link
+                    href={r.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[15px] leading-[2.2] text-primary hover:underline"
+                  >
+                    {r.label[locale]}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-
-          {project.resources && project.resources.length > 0 && (
-            <div>
-              <h2 className="mb-4 text-[19px] font-bold text-ink">{t.detail.resources}</h2>
-              <ul className="flex flex-col gap-1">
-                {project.resources.map((r) => (
-                  <li key={r.url}>
-                    <Link
-                      href={r.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-[15px] leading-[2.2] text-primary hover:underline"
-                    >
-                      {r.label[locale]}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      </section>
+        </section>
+      )}
     </main>
   );
 }
