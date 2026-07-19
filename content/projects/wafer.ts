@@ -25,11 +25,22 @@ export const wafer: Project = {
   techStack: ["CNN", "TensorFlow/Keras", "Grad-CAM", "MLflow", "Streamlit"],
   cover: "/projects/wafer/stitch-cover.jpg",
   gallery: [
-    { src: "/projects/wafer/grad-cam.png", caption: { ko: "Grad-CAM 시각화", en: "Grad-CAM visualization" } },
-    { src: "/projects/wafer/confusion-matrix-after.png", caption: { ko: "혼동 행렬(개선 후)", en: "Confusion matrix (after tuning)" } },
-    { src: "/projects/wafer/sample-wafer-map.png", caption: { ko: "클래스별 웨이퍼맵 샘플", en: "Sample wafer maps per class" } },
-    { src: "/projects/wafer/training-vs-validation.png", caption: { ko: "학습/검증 곡선", en: "Training vs. validation curves" } },
-    { src: "/projects/wafer/mlflow-macro-f1.png", caption: { ko: "MLflow macro F1 추적", en: "MLflow macro F1 tracking" } },
+    {
+      src: "/projects/wafer/app-overview.png",
+      caption: { ko: "배포 앱 — 프로젝트 개요", en: "Deployed app — project overview" },
+    },
+    {
+      src: "/projects/wafer/app-predict.png",
+      caption: { ko: "배포 앱 — 웨이퍼맵 업로드 및 실시간 예측", en: "Deployed app — wafer-map upload & live prediction" },
+    },
+    {
+      src: "/projects/wafer/app-classes.png",
+      caption: { ko: "배포 앱 — 결함 패턴별 예시·추정 공정 원인", en: "Deployed app — defect classes with likely process causes" },
+    },
+    {
+      src: "/projects/wafer/app-model-info.png",
+      caption: { ko: "배포 앱 — 모델 구조 및 클래스 정보", en: "Deployed app — model architecture & class info" },
+    },
   ],
   resources: [
     {
