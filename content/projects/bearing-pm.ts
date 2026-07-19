@@ -1,0 +1,47 @@
+import type { Project } from "./types";
+
+export const bearingPm: Project = {
+  slug: "bearing-pm",
+  order: 1,
+  title: { ko: "베어링 예지보전", en: "Bearing Predictive Maintenance" },
+  tagline: {
+    ko: "진동 신호로 베어링 열화를 조기에 감지하는 RandomForest 모델",
+    en: "Detecting early bearing degradation from vibration signals with a RandomForest model",
+  },
+  summary: {
+    ko: "가속도계로 수집한 진동 신호에서 h_rms, h_kurt, h_skew, h_crest 등 통계적 특징을 추출해 베어링의 정상/열화 상태를 분류하는 RandomForest 모델입니다. 특징 중요도 분석을 통해 어떤 신호 특성이 열화를 가장 잘 설명하는지 검증했고, 임계값 튜닝으로 오탐/미탐 균형을 맞췄습니다.",
+    en: "A RandomForest model that classifies bearing condition (normal vs. degraded) from statistical features - h_rms, h_kurt, h_skew, h_crest - extracted from accelerometer vibration signals. Feature-importance analysis validates which signal characteristics best explain degradation, and threshold tuning balances false positives against missed failures.",
+  },
+  highlights: [
+    {
+      ko: "h_rms·h_kurt·h_skew·h_crest 진동 특징 기반 정상/열화 이진 분류",
+      en: "Binary normal/degraded classification from vibration features (h_rms, h_kurt, h_skew, h_crest)",
+    },
+    {
+      ko: "특징 중요도 분석 결과 h_rms가 예측 기여도 82%로 가장 높음",
+      en: "Feature-importance analysis shows h_rms drives 82% of the prediction",
+    },
+    {
+      ko: "Streamlit Cloud에 실시간 진단 데모 배포",
+      en: "Deployed as a live diagnostic demo on Streamlit Cloud",
+    },
+  ],
+  techStack: ["RandomForest", "scikit-learn", "pandas", "Streamlit"],
+  cover: "/projects/bearing-pm/cover.png",
+  gallery: [
+    { src: "/projects/bearing-pm/fig-rms.png", caption: { ko: "RMS 기반 진동 신호 추이", en: "Vibration RMS trend over time" } },
+    { src: "/projects/bearing-pm/fig-importance.png", caption: { ko: "특징 중요도", en: "Feature importance" } },
+    { src: "/projects/bearing-pm/fig-cm.png", caption: { ko: "혼동 행렬", en: "Confusion matrix" } },
+    { src: "/projects/bearing-pm/fig-threshold.png", caption: { ko: "임계값 비교", en: "Threshold comparison" } },
+    { src: "/projects/bearing-pm/testbed.jpg", caption: { ko: "실제 베어링 테스트베드", en: "Real bearing test rig" } },
+  ],
+  resources: [
+    {
+      label: { ko: "학습 노트북 (RUL)", en: "Training notebook (RUL)" },
+      url: "https://github.com/dldmswn0293-stack/bearing_PM/blob/main/bearing_RUL.ipynb",
+    },
+    { label: { ko: "보고서 PDF", en: "Report PDF" }, url: "/projects/bearing-pm/report.pdf" },
+  ],
+  githubUrl: "https://github.com/dldmswn0293-stack/bearing_PM",
+  demoUrl: "https://bearingpm-ej.streamlit.app/",
+};
