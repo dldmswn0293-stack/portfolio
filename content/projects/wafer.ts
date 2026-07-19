@@ -23,7 +23,7 @@ export const wafer: Project = {
     { ko: "MLflow로 실험 추적, macro F1 기준 모델 선정", en: "Experiment tracking in MLflow, model selection by macro F1" },
   ],
   techStack: ["CNN", "TensorFlow/Keras", "Grad-CAM", "MLflow", "Streamlit"],
-  cover: "/projects/wafer/app-predict.png",
+  cover: "/projects/wafer/stitch-cover.jpg",
   resources: [
     {
       label: { ko: "학습 노트북", en: "Training notebook" },
