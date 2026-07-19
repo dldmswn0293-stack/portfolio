@@ -2,6 +2,7 @@
 
 import {
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useMemo,
@@ -26,23 +27,33 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const stored = window.localStorage.getItem(STORAGE_KEY) as Locale | null;
-    if (stored === "ko" || stored === "en") {
-      setLocaleState(stored);
-      return;
-    }
-    setLocaleState(window.navigator.language.toLowerCase().startsWith("ko") ? "ko" : "en");
+    const initial: Locale =
+      stored === "ko" || stored === "en"
+        ? stored
+        : window.navigator.language.toLowerCase().startsWith("ko")
+          ? "ko"
+          : "en";
+    // 브라우저 전용 API(localStorage/navigator)는 마운트 이후에만 읽을 수 있어 effect에서 동기화한다.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setLocaleState(initial);
   }, []);
 
-  const setLocale = (next: Locale) => {
+  const setLocale = useCallback((next: Locale) => {
     setLocaleState(next);
     window.localStorage.setItem(STORAGE_KEY, next);
-  };
+  }, []);
 
-  const toggleLocale = () => setLocale(locale === "ko" ? "en" : "ko");
+  const toggleLocale = useCallback(() => {
+    setLocaleState((prev) => {
+      const next = prev === "ko" ? "en" : "ko";
+      window.localStorage.setItem(STORAGE_KEY, next);
+      return next;
+    });
+  }, []);
 
   const value = useMemo<LanguageContextValue>(
     () => ({ locale, setLocale, toggleLocale, t: dictionary[locale] }),
-    [locale],
+    [locale, setLocale, toggleLocale],
   );
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;

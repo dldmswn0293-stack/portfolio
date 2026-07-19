@@ -7,10 +7,10 @@ import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: {
-    default: "EJ Portfolio — ML/DL/LLM Projects",
-    template: "%s — EJ Portfolio",
+    default: "Eunju Lee — Smart Factory AI Portfolio",
+    template: "%s — Eunju Lee",
   },
-  description: "예지보전부터 Agentic RAG까지, 제조 도메인 ML/DL/LLM 프로젝트 포트폴리오.",
+  description: "예지보전, 품질 검사, Agentic AI까지 — 제조 현장의 문제를 AI로 직접 풀어본 스마트팩토리 AI 포트폴리오.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

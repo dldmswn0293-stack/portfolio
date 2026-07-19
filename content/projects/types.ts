@@ -16,8 +16,10 @@ export interface ResourceLink {
 export interface Project {
   slug: string;
   order: number;
+  category: LocalizedText;
   title: LocalizedText;
   tagline: LocalizedText;
+  businessValue: LocalizedText;
   summary: LocalizedText;
   highlights: LocalizedText[];
   techStack: string[];

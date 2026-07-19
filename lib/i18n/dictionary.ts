@@ -2,8 +2,8 @@ export type Locale = "ko" | "en";
 
 export interface Dictionary {
   nav: { work: string };
-  hero: { eyebrow: string; title: string; subtitle: string };
-  card: { github: string; demo: string; demoNotice: string; viewProject: string };
+  hero: { eyebrow: string; title: string; subtitle: string; capabilitiesLabel: string };
+  card: { github: string; demo: string; demoNotice: string; viewProject: string; whyItMatters: string };
   detail: { back: string; highlights: string; techStack: string; gallery: string; resources: string };
   footer: { rights: string };
 }
@@ -12,16 +12,18 @@ export const dictionary: Record<Locale, Dictionary> = {
   ko: {
     nav: { work: "프로젝트" },
     hero: {
-      eyebrow: "ML · DL · LLM 포트폴리오",
-      title: "데이터로 문제를 풀고,\n모델로 현장에 배포합니다.",
+      eyebrow: "스마트팩토리 × AI 솔루션",
+      title: "현장을 이해하는 기술로,\n고객의 스마트팩토리를 설계합니다.",
       subtitle:
-        "예지보전부터 Agentic RAG까지, 제조 도메인의 ML/DL/LLM 프로젝트 3가지를 소개합니다.",
+        "예지보전, 품질 검사, Agentic AI까지 — 제조 현장의 문제를 AI로 직접 풀어본 경험이 고객의 니즈를 가장 정확히 짚어내는 기술 기반 제안의 출발점이 됩니다.",
+      capabilitiesLabel: "핵심 역량",
     },
     card: {
       github: "GitHub",
       demo: "Live Demo",
       demoNotice: "최초 로딩 시 20~30초 정도 걸릴 수 있어요.",
       viewProject: "프로젝트 자세히 보기",
+      whyItMatters: "왜 중요한가",
     },
     detail: {
       back: "전체 프로젝트",
@@ -37,16 +39,18 @@ export const dictionary: Record<Locale, Dictionary> = {
   en: {
     nav: { work: "Projects" },
     hero: {
-      eyebrow: "ML · DL · LLM Portfolio",
-      title: "Solving problems with data,\nshipping models to production.",
+      eyebrow: "Smart Factory × AI Solutions",
+      title: "Engineering that understands the floor,\ndesigning smart factories with customers.",
       subtitle:
-        "Three ML/DL/LLM projects spanning predictive maintenance to agentic RAG in manufacturing.",
+        "From predictive maintenance to defect inspection and agentic AI — hands-on experience solving real shop-floor problems is what makes a technical proposal actually land with the customer.",
+      capabilitiesLabel: "Core Capabilities",
     },
     card: {
       github: "GitHub",
       demo: "Live Demo",
       demoNotice: "First load may take 20-30s while the demo wakes up.",
       viewProject: "View project",
+      whyItMatters: "Why it matters",
     },
     detail: {
       back: "All projects",

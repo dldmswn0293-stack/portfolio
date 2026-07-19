@@ -8,7 +8,7 @@ export function LanguageToggle() {
   return (
     <button
       onClick={toggleLocale}
-      className="rounded-sm bg-ink px-[15px] py-[8px] text-[14px] text-white transition active:scale-95"
+      className="rounded-sm border border-border px-[15px] py-[8px] text-[14px] font-medium text-ink-muted transition hover:border-ink hover:text-ink active:scale-95"
       aria-label="Toggle language"
     >
       {locale === "ko" ? "EN" : "KO"}

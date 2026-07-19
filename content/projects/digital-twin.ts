@@ -3,10 +3,15 @@ import type { Project } from "./types";
 export const digitalTwin: Project = {
   slug: "digital-twin",
   order: 3,
+  category: { ko: "Agentic AI / 디지털 트윈", en: "Agentic AI / Digital Twin" },
   title: { ko: "제조 설비 Agentic AI 데모", en: "Manufacturing Agentic AI Demo" },
   tagline: {
     ko: "LangGraph 기반 RAG 에이전트로 ML 예지보전 모델과 레거시 시스템을 연결",
     en: "A LangGraph RAG agent wrapping ML predictive-maintenance models as tools for legacy systems",
+  },
+  businessValue: {
+    ko: "현장 담당자가 매뉴얼을 뒤지거나 여러 시스템을 오가는 대신, 자연어로 묻고 예지보전 모델의 판단까지 바로 받아볼 수 있어 레거시 시스템 도입 장벽을 낮춥니다.",
+    en: "Instead of digging through manuals or switching between systems, a floor operator can just ask in natural language and get the predictive-maintenance model's read directly — lowering the barrier to adopting AI alongside legacy systems.",
   },
   summary: {
     ko: "질문의 의도를 라우팅해 하이브리드 검색(Dense+BM25)과 베어링·웨이퍼 예측 모델 Tool을 조건에 따라 호출하는 LangGraph 기반 Agent입니다. Claude API와 로컬 sLLM(Ollama) 백엔드를 코드 변경 없이 전환할 수 있도록 추상화했고, LangSmith로 전체 파이프라인을 트레이싱합니다.",

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EUNJU LEE | Precision-Engineered Industrial AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/npm/geist@1.0.3/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2');
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/npm/geist@1.0.3/dist/fonts/geist-sans/Geist-Medium.woff2') format('woff2');
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/npm/geist@1.0.3/dist/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2');
+            font-weight: 600;
+        }
+
+        body {
+            font-family: 'Geist', sans-serif;
+            background-color: #081425;
+            color: #d8e3fb;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid #1E293B;
+            transition: border-color 0.3s ease;
+        }
+
+        .glass-panel:hover {
+            border-color: rgba(173, 198, 255, 0.3);
+        }
+
+        .technical-chip {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #1E293B;
+            color: #c1c6d7;
+            padding: 4px 12px;
+            font-size: 13px;
+            border-radius: 2px;
+            border-left: 2px solid #adc6ff;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "surface-container-highest": "#2a3548",
+                        "on-primary-fixed-variant": "#004493",
+                        "primary-fixed-dim": "#adc6ff",
+                        "inverse-primary": "#005bc1",
+                        "surface-dim": "#081425",
+                        "on-secondary-container": "#a7b6cc",
+                        "on-tertiary-container": "#22293d",
+                        "on-surface": "#d8e3fb",
+                        "on-background": "#d8e3fb",
+                        "on-primary-container": "#00285c",
+                        "surface-variant": "#2a3548",
+                        "on-error": "#690005",
+                        "on-primary": "#002e69",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "background": "#081425",
+                        "inverse-surface": "#d8e3fb",
+                        "secondary-fixed": "#d4e4fa",
+                        "primary": "#adc6ff",
+                        "surface-bright": "#2f3a4c",
+                        "secondary": "#b9c8de",
+                        "inverse-on-surface": "#263143",
+                        "on-surface-variant": "#c1c6d7",
+                        "on-secondary-fixed": "#0d1c2d",
+                        "on-tertiary": "#283044",
+                        "primary-fixed": "#d8e2ff",
+                        "primary-container": "#4b8eff",
+                        "on-secondary-fixed-variant": "#39485a",
+                        "tertiary": "#bec6e0",
+                        "surface-container-high": "#1f2a3c",
+                        "tertiary-container": "#8990a8",
+                        "on-error-container": "#ffdad6",
+                        "outline-variant": "#414755",
+                        "surface": "#081425",
+                        "surface-container-low": "#111c2d",
+                        "on-secondary": "#233143",
+                        "outline": "#8b90a0",
+                        "secondary-fixed-dim": "#b9c8de",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#dae2fd",
+                        "on-primary-fixed": "#001a41",
+                        "surface-tint": "#adc6ff",
+                        "surface-container": "#152031",
+                        "surface-container-lowest": "#040e1f",
+                        "on-tertiary-fixed": "#131b2e",
+                        "secondary-container": "#39485a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xl": "4rem",
+                        "sm": "1rem",
+                        "gutter": "24px",
+                        "lg": "2.5rem",
+                        "margin": "32px",
+                        "base": "4px",
+                        "xs": "0.5rem",
+                        "md": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Geist"],
+                        "display-lg": ["Geist"],
+                        "label-mono": ["JetBrains Mono"],
+                        "body-base": ["Geist"],
+                        "display-lg-mobile": ["Geist"],
+                        "caption": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-mono": ["13px", { "lineHeight": "1.5", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-base": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "caption": ["14px", { "lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center px-margin py-4 max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface">EUNJU LEE</div>
+<div class="hidden md:flex items-center gap-md">
+<a class="font-body-base text-body-base text-primary font-medium border-b-2 border-primary pb-1" href="#">Home</a>
+<a class="font-body-base text-body-base text-on-surface-variant hover:text-primary transition-colors" href="#">AI Projects</a>
+</div>
+<button class="bg-primary text-on-primary-container px-md py-2 font-body-base text-body-base font-medium rounded hover:opacity-80 transition-opacity">
+                Contact
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-60" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBgXi3HXjEMUlJ6Pwjv3cq8OMMaf2Trhy0eIMhiVv0oX8kynglSMUVlKA-LWq8Ka5xo56TuWhJ8opG9xng5HHDTAMIs7nmbZdVywpH_CJhQ1E22_GwpIRMiKnpvXaMrTYhlhdw7cwNERp_v9z-TtZfD2DA7E-BxqrqKyza9fqK5ls-Y6pQCShZiprgqWoq77f7-YYcrcIjoDl-qEpNoRIYh-pklQYbuB3Qg0dVYDLFxGx9fMcnkmT4S')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin max-w-7xl mx-auto w-full">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-xs mb-md px-sm py-1 border border-primary/20 bg-primary/5 rounded-full">
+<span class="material-symbols-outlined text-primary scale-75">precision_manufacturing</span>
+<span class="font-label-mono text-label-mono text-primary uppercase">Industrial Intelligence Systems</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-sm">
+                        Precision-Engineered <br/>Industrial AI
+                    </h1>
+<p class="font-body-base text-body-base text-on-surface-variant mb-lg max-w-lg">
+                        Developing reliable AI solutions for semiconductor manufacturing and smart factory ecosystems. High-fidelity predictive modeling and autonomous optimization for mission-critical hardware.
+                    </p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-primary text-on-primary-container px-lg py-3 font-body-base text-body-base font-semibold rounded flex items-center gap-sm hover:opacity-90 transition-all">
+                            Explore AI Projects
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-outline-variant text-on-surface px-lg py-3 font-body-base text-body-base font-medium rounded hover:bg-surface-variant/30 transition-all">
+                            Technical Specs
+                        </button>
+</div>
+</div>
+</div>
+<!-- Atmospheric micro-interaction -->
+<div class="absolute bottom-0 right-0 p-margin hidden lg:block opacity-40">
+<div class="technical-chip">SYSTEM STATUS: NOMINAL</div>
+</div>
+</section>
+<!-- Expertise Section / Bento Grid -->
+<section class="py-xl px-margin max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xs">Expertise &amp; Infrastructure</h2>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-xl">
+                        Merging high-level machine learning architectures with low-level industrial protocols for seamless factory integration.
+                    </p>
+</div>
+<div class="font-label-mono text-label-mono text-outline uppercase tracking-widest border-b border-outline-variant pb-2">
+                    Section 01 / Technical Domain
+                </div>
+</div>
+<div class="bento-grid">
+<!-- Predictive Maintenance Card -->
+<div class="col-span-12 md:col-span-8 glass-panel p-md rounded-xl flex flex-col md:flex-row gap-lg">
+<div class="flex-1 flex flex-col justify-center">
+<span class="material-symbols-outlined text-primary mb-md" style="font-variation-settings: 'opsz' 48;">analytics</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Predictive Maintenance</h3>
+<p class="font-caption text-caption text-on-surface-variant mb-md">
+                            Deep learning models trained on sensor telemetry to predict component failure with 99.2% accuracy before operational downtime occurs.
+                        </p>
+<div class="flex flex-wrap gap-xs">
+<span class="technical-chip">LSTM</span>
+<span class="technical-chip">Time-Series</span>
+<span class="technical-chip">Edge-AI</span>
+</div>
+</div>
+<div class="w-full md:w-1/2 h-64 md:h-auto rounded-lg overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional close-up macro shot of a complex industrial sensor array with clean cool lighting, emphasizing precision engineering and high-tech hardware components in a modern semiconductor factory setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCEHDXp-7xlC61Dd7Fs5yiXaxBQYvnUg042ZqvMwg61GE-YemKv5ptkGnJAtXA4BaaeUcUvmi3pd-n0bUoNvsiEYslgB1VGxjH6fLERqIHkdanni6g7hQMWsE-fWYai-4LAVQxt__QVAtSPMjUCn6TFfoT9iP_k2Brecc2SYEp71AzO7kcyRQ1XycIxjg1bUykMQJeJWiFIhLC222Mrc8hCvUlV6QtBxVHtgaGW-1vuCtRX0hpzdtjk')"></div>
+</div>
+</div>
+<!-- Computer Vision Card -->
+<div class="col-span-12 md:col-span-4 glass-panel p-md rounded-xl flex flex-col">
+<span class="material-symbols-outlined text-primary mb-md">visibility</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Quality Inspection</h3>
+<p class="font-caption text-caption text-on-surface-variant flex-grow mb-md">
+                        Advanced computer vision systems for real-time defect detection in semiconductor wafer manufacturing lines.
+                    </p>
+<div class="h-40 bg-surface-container rounded mb-md overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center opacity-80" data-alt="Microscopic view of a semiconductor wafer featuring intricate electrical circuits and golden traces, captured with high-resolution clinical precision and professional studio lighting, highlighting the technical complexity of microchip fabrication." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCivdp0xhwVYIljlDnKPkOxm2ISsuGGGd-PBQ7_gfwrMHEqYEX4-yydTxep_GhqTdqltVwW-4yl9_j2DqBEv1bMf1t7eTniY7MCWN0wvfkO2DVI5q1ST92qP01VsCTcAN6e7NvP_1Jk6Dsw8CUlkp9zmlwQQmEpj9EFXTxZxN8QEG6qt_xxvqzpGwUhcUa6yyXXLhytbMISQO4P7qG7GMfH67awXJiA-J_wYkPuonx1Ha41K5qOq5_B')"></div>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="technical-chip">YOLOv8</span>
+<span class="technical-chip">CUDA</span>
+</div>
+</div>
+<!-- Smart Factory Card -->
+<div class="col-span-12 md:col-span-4 glass-panel p-md rounded-xl flex flex-col">
+<span class="material-symbols-outlined text-primary mb-md">settings_suggest</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Factory Optimization</h3>
+<p class="font-caption text-caption text-on-surface-variant mb-md">
+                        Multi-agent reinforcement learning for dynamic scheduling and energy consumption optimization in high-output plants.
+                    </p>
+<div class="flex flex-wrap gap-xs">
+<span class="technical-chip">RLlib</span>
+<span class="technical-chip">Digital Twins</span>
+</div>
+</div>
+<!-- Documentation Card -->
+<div class="col-span-12 md:col-span-8 glass-panel p-md rounded-xl flex items-center justify-between group cursor-pointer border-l-4 border-l-primary">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Technical Documentation</h3>
+<p class="font-caption text-caption text-on-surface-variant">View the engineering stack, API references, and industrial case studies.</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">menu_book</span>
+</div>
+</div>
+</section>
+<!-- System Overview / Stats Section -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="px-margin max-w-7xl mx-auto">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-xl">
+<div class="border-l border-outline-variant pl-md">
+<div class="font-display-lg text-display-lg text-primary mb-xs">14+</div>
+<div class="font-label-mono text-label-mono text-on-surface-variant uppercase">Deployed Projects</div>
+</div>
+<div class="border-l border-outline-variant pl-md">
+<div class="font-display-lg text-display-lg text-primary mb-xs">0.5ms</div>
+<div class="font-label-mono text-label-mono text-on-surface-variant uppercase">Inference Latency</div>
+</div>
+<div class="border-l border-outline-variant pl-md">
+<div class="font-display-lg text-display-lg text-primary mb-xs">99%</div>
+<div class="font-label-mono text-label-mono text-on-surface-variant uppercase">Uptime Reliability</div>
+</div>
+<div class="border-l border-outline-variant pl-md">
+<div class="font-display-lg text-display-lg text-primary mb-xs">Petabyte</div>
+<div class="font-label-mono text-label-mono text-on-surface-variant uppercase">Data Handled</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl mt-xl border-t border-outline-variant bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin max-w-7xl mx-auto gap-md">
+<div class="flex flex-col gap-xs items-center md:items-start">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant">EUNJU LEE</span>
+<p class="font-caption text-caption text-secondary">© 2024 EUNJU LEE. Precision Engineered AI.</p>
+</div>
+<div class="flex gap-md">
+<a class="font-caption text-caption text-on-secondary-container hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="font-caption text-caption text-on-secondary-container hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="font-caption text-caption text-on-secondary-container hover:text-primary transition-colors" href="#">Documentation</a>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle atmosphere effect - moving border highlight
+        document.querySelectorAll('.glass-panel').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Sticky nav transition
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+    </script>
+</body></html>

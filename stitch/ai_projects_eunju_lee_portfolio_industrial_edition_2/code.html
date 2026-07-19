@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EUNJU LEE | AI Projects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ffb4ab",
+                    "tertiary-fixed-dim": "#bec6e0",
+                    "surface-container-highest": "#2a3548",
+                    "on-primary-fixed-variant": "#004493",
+                    "primary-fixed-dim": "#adc6ff",
+                    "inverse-primary": "#005bc1",
+                    "surface-dim": "#081425",
+                    "on-secondary-container": "#a7b6cc",
+                    "on-tertiary-container": "#22293d",
+                    "on-surface": "#d8e3fb",
+                    "on-background": "#d8e3fb",
+                    "on-primary-container": "#00285c",
+                    "surface-variant": "#2a3548",
+                    "on-error": "#690005",
+                    "on-primary": "#002e69",
+                    "on-tertiary-fixed-variant": "#3f465c",
+                    "background": "#081425",
+                    "inverse-surface": "#d8e3fb",
+                    "secondary-fixed": "#d4e4fa",
+                    "primary": "#adc6ff",
+                    "surface-bright": "#2f3a4c",
+                    "secondary": "#b9c8de",
+                    "inverse-on-surface": "#263143",
+                    "on-surface-variant": "#c1c6d7",
+                    "on-secondary-fixed": "#0d1c2d",
+                    "on-tertiary": "#283044",
+                    "primary-fixed": "#d8e2ff",
+                    "primary-container": "#4b8eff",
+                    "on-secondary-fixed-variant": "#39485a",
+                    "tertiary": "#bec6e0",
+                    "surface-container-high": "#1f2a3c",
+                    "tertiary-container": "#8990a8",
+                    "on-error-container": "#ffdad6",
+                    "outline-variant": "#414755",
+                    "surface": "#081425",
+                    "surface-container-low": "#111c2d",
+                    "on-secondary": "#233143",
+                    "outline": "#8b90a0",
+                    "secondary-fixed-dim": "#b9c8de",
+                    "error-container": "#93000a",
+                    "tertiary-fixed": "#dae2fd",
+                    "on-primary-fixed": "#001a41",
+                    "surface-tint": "#adc6ff",
+                    "surface-container": "#152031",
+                    "surface-container-lowest": "#040e1f",
+                    "on-tertiary-fixed": "#131b2e",
+                    "secondary-container": "#39485a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xl": "4rem",
+                    "sm": "1rem",
+                    "gutter": "24px",
+                    "lg": "2.5rem",
+                    "margin": "32px",
+                    "base": "4px",
+                    "xs": "0.5rem",
+                    "md": "1.5rem"
+            },
+            "fontFamily": {
+                    "headline-md": ["Geist"],
+                    "display-lg": ["Geist"],
+                    "label-mono": ["JetBrains Mono"],
+                    "body-base": ["Geist"],
+                    "display-lg-mobile": ["Geist"],
+                    "caption": ["Geist"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label-mono": ["13px", {"lineHeight": "1.5", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-base": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "caption": ["14px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #081425;
+            color: #d8e3fb;
+            font-family: 'Geist', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .precision-grid {
+            background-image: radial-gradient(circle at 1px 1px, #1E293B 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant dark:border-outline-variant transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center px-margin py-4 max-w-7xl mx-auto">
+<span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface dark:text-on-surface">EUNJU LEE</span>
+<div class="hidden md:flex gap-md items-center">
+<a class="font-body-base text-body-base text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-body-base text-body-base text-primary dark:text-primary font-medium border-b-2 border-primary pb-1" href="#">AI Projects</a>
+</div>
+<button class="bg-primary text-on-primary font-body-base text-body-base px-sm py-xs rounded hover:opacity-80 transition-opacity">
+                Contact
+            </button>
+</div>
+</nav>
+<main class="flex-grow mt-xl precision-grid">
+<div class="max-w-7xl mx-auto px-margin py-xl">
+<!-- Header Section -->
+<header class="mb-xl">
+<div class="flex items-center gap-xs mb-sm">
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-widest">Repository</span>
+<div class="h-px flex-grow bg-outline-variant"></div>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-on-background mb-sm">Industrial Intelligence</h1>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-2xl">
+                    High-precision AI solutions engineered for reliability, safety, and operational excellence in manufacturing environments.
+                </p>
+</header>
+<!-- Projects List -->
+<div class="space-y-md">
+<!-- Project 1: Bearing Predictive Maintenance -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col md:flex-row group hover:border-primary/30 transition-all duration-300">
+<div class="w-full md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden bg-surface-container">
+<div class="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500 bg-cover bg-center" data-alt="A high-contrast macro photograph of industrial steel roller bearings inside a complex machine. The lighting is cold and technical, highlighting the metallic textures and precision engineering. The composition is clean and structured, set in a modern industrial factory with deep blue and steel gray tones, reflecting a professional AI development aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFo7cLPmloO50fYzyNbTE8nN1ngvWTIEWhUC_JrPmokEY6TvbrIsxY_yT2h43fkL6LH00-PjIrhy2xpSmCfV8T8qigStJeIMaE2JGi9lXicXVcQKAz49M8LP3ezSi9j7OKR9cIXNeOv4TY-GEGJx54ZzlzOlKE9BvZ3gXyN4Tds7VvcOhQC7dy51wP10OHn5dnkx1G6aXpmMiKuZn6lAoK7QZD73oHA-1tX2g_r166i3DtqUqQFcrT')">
+</div>
+</div>
+<div class="p-md md:p-lg flex flex-col justify-between flex-grow">
+<div>
+<div class="flex flex-wrap gap-xs mb-sm">
+<span class="font-label-mono text-label-mono bg-surface-container-highest px-sm py-1 rounded-full text-on-surface-variant">Machine Learning</span>
+<span class="font-label-mono text-label-mono bg-primary/10 px-sm py-1 rounded-full text-primary">Time Series Analysis</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xs">Bearing Predictive Maintenance</h2>
+<p class="font-body-base text-body-base text-on-surface-variant mb-md max-w-xl">
+                                Implementation of a predictive maintenance framework using LSTM-based anomaly detection. Reduces unplanned downtime by identifying micro-vibration patterns indicating early-stage bearing fatigue in high-speed rotary equipment.
+                            </p>
+</div>
+<div class="flex items-center gap-sm mt-auto">
+<button class="bg-primary text-on-primary font-body-base text-body-base px-md py-sm rounded hover:opacity-90 transition-all flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+                                Live Demo
+                            </button>
+<button class="border border-outline text-on-surface font-body-base text-body-base px-md py-sm rounded hover:bg-surface-container-high transition-all flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">code</span>
+                                GitHub
+                            </button>
+</div>
+</div>
+</article>
+<!-- Project 2: Wafer Defect Pattern Classification -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col md:flex-row group hover:border-primary/30 transition-all duration-300">
+<div class="w-full md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden bg-surface-container">
+<div class="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500 bg-cover bg-center" data-alt="A microscopic view of a semiconductor silicon wafer with intricate circuit patterns and structural layers. The lighting is diffused, mimicking a cleanroom environment, with soft highlights on the iridescent surface. The aesthetic is extremely precise and technical, dominated by cool grays and subtle blue hues, representing high-end deep learning applications in electronics manufacturing." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbkq0AsrHpiq9kBv52Tt-WmPC3O2L4ZskXGd1InbuZ5WZcPGXSjpm11OS07ig9HAPwzOTsxLjTttWc8hVU1-R00Zvs6Rhxqd3UQIosC21LWlKgBimmhDnbPPrtZXbTjwjMidY0X_gbpbDegDRTkAY38ESlZWQ2DAQ7D1NcIR3-didpAx4YMMYE5nVWObA2NoU5ogHtHU6PWnTkxZIQ9mK9TXsoiCSxjxUO_sj86g27XHR5HJH7W1F-')">
+</div>
+</div>
+<div class="p-md md:p-lg flex flex-col justify-between flex-grow">
+<div>
+<div class="flex flex-wrap gap-xs mb-sm">
+<span class="font-label-mono text-label-mono bg-surface-container-highest px-sm py-1 rounded-full text-on-surface-variant">Deep Learning</span>
+<span class="font-label-mono text-label-mono bg-primary/10 px-sm py-1 rounded-full text-primary">Computer Vision</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xs">Wafer Defect Pattern Classification</h2>
+<p class="font-body-base text-body-base text-on-surface-variant mb-md max-w-xl">
+                                A high-accuracy Vision Transformer (ViT) model for identifying complex defect patterns in semiconductor wafers. Optimized for real-time throughput on factory edge nodes, providing immediate feedback for yield optimization.
+                            </p>
+</div>
+<div class="flex items-center gap-sm mt-auto">
+<button class="bg-primary text-on-primary font-body-base text-body-base px-md py-sm rounded hover:opacity-90 transition-all flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+                                Live Demo
+                            </button>
+<button class="border border-outline text-on-surface font-body-base text-body-base px-md py-sm rounded hover:bg-surface-container-high transition-all flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">code</span>
+                                GitHub
+                            </button>
+</div>
+</div>
+</article>
+<!-- Project 3: Agentic AI for Manufacturing Equipment -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col md:flex-row group hover:border-primary/30 transition-all duration-300">
+<div class="w-full md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden bg-surface-container">
+<div class="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500 bg-cover bg-center" data-alt="A sophisticated digital dashboard interface showing real-time technical documentation and schematic diagrams for industrial manufacturing equipment. The visuals are clean, data-heavy, and structured, featuring monospaced typography and thin structural grid lines. The lighting is soft and professional, with a color palette of deep navy, slate gray, and bright primary blue accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLUfFDci32X66BkLmcbAl5G5TECPlZt_q5Jbs9QPe73UGX__4WZaF_RmqZKMmJ-zQ-2tFepDGKP8Hdz8Y7knTU82FKmiBvIIRHAFJMFDtc6lXHBWbfd1bbv3PVUyleqBophbrIT-xIxbxrypIN6TGjbxfmbuT1U99hlthq7N96bHkdMJtcNgIY7np9rEfGd26Yu_gh79t_iAgXSgTdI-3u1ZLrEVdIyGrUsleRf0SJhJBhI6VXnL6S')">
+</div>
+</div>
+<div class="p-md md:p-lg flex flex-col justify-between flex-grow">
+<div>
+<div class="flex flex-wrap gap-xs mb-sm">
+<span class="font-label-mono text-label-mono bg-surface-container-highest px-sm py-1 rounded-full text-on-surface-variant">LLM / Agents</span>
+<span class="font-label-mono text-label-mono bg-primary/10 px-sm py-1 rounded-full text-primary">RAG Architecture</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xs">Agentic AI for Manufacturing Equipment</h2>
+<p class="font-body-base text-body-base text-on-surface-variant mb-md max-w-xl">
+                                LLM-powered support agent with Retrieval-Augmented Generation (RAG) integrated into technical manuals. Enables field engineers to perform natural language queries for rapid troubleshooting and equipment re-configuration.
+                            </p>
+</div>
+<div class="flex items-center gap-sm mt-auto">
+<button class="bg-primary text-on-primary font-body-base text-body-base px-md py-sm rounded hover:opacity-90 transition-all flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+                                Live Demo
+                            </button>
+<button class="border border-outline text-on-surface font-body-base text-body-base px-md py-sm rounded hover:bg-surface-container-high transition-all flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">code</span>
+                                GitHub
+                            </button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl mt-xl bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin max-w-7xl mx-auto gap-md">
+<div class="flex flex-col gap-xs text-center md:text-left">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant">EUNJU LEE</span>
+<span class="font-caption text-caption text-secondary dark:text-secondary">© 2024 EUNJU LEE. Precision Engineered AI.</span>
+</div>
+<div class="flex gap-md">
+<a class="font-caption text-caption text-on-secondary-container dark:text-on-secondary-container hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="font-caption text-caption text-on-secondary-container dark:text-on-secondary-container hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="font-caption text-caption text-on-secondary-container dark:text-on-secondary-container hover:text-primary transition-colors" href="#">Documentation</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+        // Hover sound or micro-interaction logic could go here
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                // Future expansion for haptic-like visual feedback
+            });
+        });
+    </script>
+</body></html>

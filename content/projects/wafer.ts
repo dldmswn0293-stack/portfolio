@@ -3,10 +3,15 @@ import type { Project } from "./types";
 export const wafer: Project = {
   slug: "wafer",
   order: 2,
+  category: { ko: "품질 검사 (컴퓨터 비전)", en: "Quality Inspection (Computer Vision)" },
   title: { ko: "웨이퍼 결함 패턴 분류", en: "Wafer Defect Pattern Classification" },
   tagline: {
     ko: "CNN과 Grad-CAM으로 반도체 웨이퍼맵 결함을 분류하고 설명하는 모델",
     en: "Classifying semiconductor wafer-map defects with a CNN, explained via Grad-CAM",
+  },
+  businessValue: {
+    ko: "불량 유형을 빠르게 잡아낼수록 수율 손실과 재작업 비용이 줄어듭니다. 판단 근거까지 시각화하면 현장 엔지니어가 결과를 신뢰하고 바로 조치할 수 있습니다.",
+    en: "The faster a defect pattern is caught, the less yield loss and rework cost it causes. Visualizing the model's reasoning lets floor engineers trust the call and act on it immediately.",
   },
   summary: {
     ko: "웨이퍼맵 이미지를 입력으로 다중 결함 패턴(Center, Donut, Edge-Ring 등)을 분류하는 CNN 모델입니다. Grad-CAM으로 모델이 어느 영역을 근거로 판단했는지 시각화해 설명가능성을 확보했고, MLflow로 실험을 추적하며 macro F1 기준으로 모델을 관리했습니다.",

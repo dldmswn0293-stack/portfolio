@@ -10,7 +10,7 @@ export function Gallery({ images }: { images: GalleryImage[] }) {
   return (
     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
       {images.map((img) => (
-        <figure key={img.src} className="overflow-hidden rounded-lg border border-hairline bg-canvas">
+        <figure key={img.src} className="overflow-hidden rounded-lg border border-border bg-canvas">
           <Image
             src={img.src}
             alt={img.caption[locale]}
@@ -18,7 +18,7 @@ export function Gallery({ images }: { images: GalleryImage[] }) {
             height={500}
             className="w-full object-cover"
           />
-          <figcaption className="px-4 py-3 text-[14px] text-ink-muted-80">{img.caption[locale]}</figcaption>
+          <figcaption className="px-4 py-3 text-[14px] text-ink-muted">{img.caption[locale]}</figcaption>
         </figure>
       ))}
     </div>
