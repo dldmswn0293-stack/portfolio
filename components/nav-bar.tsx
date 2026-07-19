@@ -14,7 +14,7 @@ export function NavBar() {
         Eunju Lee
       </Link>
       <nav className="flex items-center gap-6">
-        <Link href="/#projects" className="text-[14px] text-ink-muted hover:text-ink">
+        <Link href="/projects" className="text-[14px] text-ink-muted hover:text-ink">
           {t.nav.work}
         </Link>
         <a

@@ -14,7 +14,7 @@ export function ProjectDetailBody({ project }: { project: Project }) {
   return (
     <main className="flex-1">
       <section className="flex flex-col items-center gap-6 bg-canvas px-6 py-16 text-center">
-        <Link href="/#projects" className="flex items-center gap-1 text-[14px] text-primary">
+        <Link href="/projects" className="flex items-center gap-1 text-[14px] text-primary">
           <ArrowLeft size={14} /> {t.detail.back}
         </Link>
         <p className="text-[13px] font-semibold tracking-[0.03em] text-primary uppercase">
@@ -22,7 +22,12 @@ export function ProjectDetailBody({ project }: { project: Project }) {
         </p>
         <h1 className="text-[28px] font-bold leading-[1.25] text-ink sm:text-[36px]">{project.title[locale]}</h1>
         <p className="max-w-[600px] text-[16px] leading-[1.6] text-ink-muted">{project.tagline[locale]}</p>
-        <MediaPreview images={project.gallery} video={project.video} title={project.title[locale]} />
+        <MediaPreview
+          cover={project.cover}
+          video={project.video}
+          title={project.title[locale]}
+          className="aspect-video w-full max-w-[860px]"
+        />
       </section>
 
       <section className="border-y border-border bg-surface px-6 py-16">

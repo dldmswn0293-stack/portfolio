@@ -24,12 +24,6 @@ export const digitalTwin: Project = {
   ],
   techStack: ["LangGraph", "LangChain", "Claude API", "ChromaDB", "BM25", "LangSmith", "Streamlit"],
   cover: "/projects/digital-twin/stitch-cover.jpg",
-  gallery: [
-    { src: "/projects/digital-twin/graph.png", caption: { ko: "LangGraph 파이프라인 구조", en: "LangGraph pipeline structure" } },
-    { src: "/projects/digital-twin/hybrid-search.png", caption: { ko: "하이브리드 검색 동작", en: "Hybrid search in action" } },
-    { src: "/projects/digital-twin/chunking-dummy.png", caption: { ko: "문서 청킹 예시", en: "Document chunking example" } },
-    { src: "/projects/digital-twin/tool-test.png", caption: { ko: "Tool 연동 테스트", en: "Tool integration test" } },
-  ],
   resources: [
     { label: { ko: "발표 자료 (PDF)", en: "Slide deck (PDF)" }, url: "/projects/digital-twin/slides.pdf" },
   ],

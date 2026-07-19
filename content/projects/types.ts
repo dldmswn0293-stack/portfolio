@@ -3,11 +3,6 @@ export interface LocalizedText {
   en: string;
 }
 
-export interface GalleryImage {
-  src: string;
-  caption: LocalizedText;
-}
-
 export interface ResourceLink {
   label: LocalizedText;
   url: string;
@@ -28,9 +23,9 @@ export interface Project {
   summary: LocalizedText;
   highlights: LocalizedText[];
   techStack: string[];
+  /** 목록/상세 페이지 미리보기 대표 이미지 */
   cover: string;
-  /** 상세 페이지 상단 미리보기: video가 있으면 영상, 없으면 gallery 이미지를 자동 순환 캐러셀로 보여줌 */
-  gallery: GalleryImage[];
+  /** 녹화된 시연 영상이 있으면 대표 이미지 대신 재생 가능한 영상으로 보여줌 */
   video?: ProjectVideo;
   resources?: ResourceLink[];
   githubUrl: string;

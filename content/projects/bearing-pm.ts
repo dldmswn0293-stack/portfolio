@@ -33,13 +33,6 @@ export const bearingPm: Project = {
   ],
   techStack: ["RandomForest", "scikit-learn", "pandas", "Streamlit"],
   cover: "/projects/bearing-pm/stitch-cover.jpg",
-  gallery: [
-    { src: "/projects/bearing-pm/fig-rms.png", caption: { ko: "RMS 기반 진동 신호 추이", en: "Vibration RMS trend over time" } },
-    { src: "/projects/bearing-pm/fig-importance.png", caption: { ko: "특징 중요도", en: "Feature importance" } },
-    { src: "/projects/bearing-pm/fig-cm.png", caption: { ko: "혼동 행렬", en: "Confusion matrix" } },
-    { src: "/projects/bearing-pm/fig-threshold.png", caption: { ko: "임계값 비교", en: "Threshold comparison" } },
-    { src: "/projects/bearing-pm/testbed.jpg", caption: { ko: "실제 베어링 테스트베드", en: "Real bearing test rig" } },
-  ],
   resources: [
     {
       label: { ko: "학습 노트북 (RUL)", en: "Training notebook (RUL)" },

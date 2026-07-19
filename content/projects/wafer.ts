@@ -23,25 +23,7 @@ export const wafer: Project = {
     { ko: "MLflow로 실험 추적, macro F1 기준 모델 선정", en: "Experiment tracking in MLflow, model selection by macro F1" },
   ],
   techStack: ["CNN", "TensorFlow/Keras", "Grad-CAM", "MLflow", "Streamlit"],
-  cover: "/projects/wafer/stitch-cover.jpg",
-  gallery: [
-    {
-      src: "/projects/wafer/app-overview.png",
-      caption: { ko: "배포 앱 — 프로젝트 개요", en: "Deployed app — project overview" },
-    },
-    {
-      src: "/projects/wafer/app-predict.png",
-      caption: { ko: "배포 앱 — 웨이퍼맵 업로드 및 실시간 예측", en: "Deployed app — wafer-map upload & live prediction" },
-    },
-    {
-      src: "/projects/wafer/app-classes.png",
-      caption: { ko: "배포 앱 — 결함 패턴별 예시·추정 공정 원인", en: "Deployed app — defect classes with likely process causes" },
-    },
-    {
-      src: "/projects/wafer/app-model-info.png",
-      caption: { ko: "배포 앱 — 모델 구조 및 클래스 정보", en: "Deployed app — model architecture & class info" },
-    },
-  ],
+  cover: "/projects/wafer/app-predict.png",
   resources: [
     {
       label: { ko: "학습 노트북", en: "Training notebook" },
