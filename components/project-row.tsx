@@ -17,7 +17,7 @@ export function ProjectRow({ project }: { project: Project }) {
         cover={project.cover}
         video={project.video}
         title={project.title[locale]}
-        className="aspect-[4/3] w-full shrink-0 md:w-[320px]"
+        className="aspect-video w-full shrink-0 md:w-[380px]"
       />
 
       <div className="flex flex-1 flex-col gap-4">
